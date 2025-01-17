@@ -6,7 +6,6 @@ import com.intellij.codeInsight.completion.CompletionProvider;
 import com.intellij.codeInsight.completion.CompletionType;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.psi.impl.source.tree.LeafPsiElement;
-import com.jetbrains.python.psi.*;
 import com.typingcat.completion.provider.DefaultCompletionProvider;
 import com.typingcat.service.WordManageService;
 

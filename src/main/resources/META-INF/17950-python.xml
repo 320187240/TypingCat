@@ -1,8 +1,0 @@
-<idea-plugin>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <completion.contributor language="Python"
-                                order="first"
-                                implementationClass="com.typingcat.completion.contributor.PythonWordCompletionContributor"/>
-    </extensions>
-</idea-plugin>
