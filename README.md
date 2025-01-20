@@ -6,6 +6,17 @@
 ![img](https://img.shields.io/badge/compatibility-203+-1?style=flat-square&logo=IntelliJIDEA)
 [![Java CI with Gradle](https://github.com/huxin1997/TypingCat/actions/workflows/gradle.yml/badge.svg)](https://github.com/huxin1997/TypingCat/actions/workflows/gradle.yml)
 
+### Todo
+
+  字典加载处有瓶颈，改为多线程
+      try (BufferedReader br = new BufferedReader(new InputStreamReader(
+                    Objects.requireNonNull(getClass().getResourceAsStream(path)), StandardCharsets.UTF_8))) {
+                //System.out.print("以 UTF-8 编码读取词典文件");
+                List<String[]> wordList = br.lines().parallel()
+                
+  高版本idea 不适配，解决中
+    ...
+    
 ### Support
 
 ![img](https://img.shields.io/badge/Idea-Java-blue?style=flat-square&logo=IntelliJIDEA)
@@ -20,6 +31,7 @@
 - 支持模糊搜索
 - 基于代码补全，使用快捷键 "Ctrl + space"
 - 离线模式，响应更快
+
 
 ### Preview
 
