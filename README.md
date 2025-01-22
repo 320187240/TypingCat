@@ -1,12 +1,4 @@
-## <img width="40px" height="40px" src="https://plugins.jetbrains.com/files/17950/147604/icon/pluginIcon.svg"> TypingCat 
-> TypingCat 是一个英语单词拼写提示与补全插件
-
-[Plugin Homepage](https://plugins.jetbrains.com/plugin/17950-typingcat) <br>
-![img](https://img.shields.io/badge/verstion-v0.0.8-blue?style=flat-square&logo=appveyor)
-![img](https://img.shields.io/badge/compatibility-203+-1?style=flat-square&logo=IntelliJIDEA)
-[![Java CI with Gradle](https://github.com/huxin1997/TypingCat/actions/workflows/gradle.yml/badge.svg)](https://github.com/huxin1997/TypingCat/actions/workflows/gradle.yml)
-
-### Todo
+## todo
 
   字典加载处有瓶颈，改为多线程
       try (BufferedReader br = new BufferedReader(new InputStreamReader(
@@ -14,29 +6,16 @@
                 //System.out.print("以 UTF-8 编码读取词典文件");
                 List<String[]> wordList = br.lines().parallel()
                 
-  高版本idea 不适配，解决中
-    ...
-    
-### Support
+## 高版本idea 不适配，解决
 
-![img](https://img.shields.io/badge/Idea-Java-blue?style=flat-square&logo=IntelliJIDEA)
-![img](https://img.shields.io/badge/PyCharm-Python-blue?style=flat-square&logo=PyCharm)
-![img](https://img.shields.io/badge/Goland-Go-blue?style=flat-square&logo=Goland)
-![img](https://img.shields.io/badge/AndroidStudio-Java-blue?style=flat-square&logo=AndroidStudio)
+      matchingDegree  修改为
+      public int matchingDegree(String string) {
+        return 1;
+      }
+      prefixMatches  修改为
+      public boolean prefixMatches(@NotNull String name) {
+          return true;
+      }
 
-### Feature
+      修改上述两处位置可解决。
 
-- 包含1万个常用单词
-- 支持应用于代码命名：局部变量、常量、方法名、方法参数、类名
-- 支持模糊搜索
-- 基于代码补全，使用快捷键 "Ctrl + space"
-- 离线模式，响应更快
-
-
-### Preview
-
-![Preview](./doc/image/preview_1.gif)
-
-### Trending
-
-[![Stargazers over time](https://starchart.cc/huxin1997/TypingCat.svg)](https://starchart.cc/huxin1997/TypingCat)
