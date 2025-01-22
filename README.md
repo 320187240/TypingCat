@@ -1,10 +1,10 @@
 ## todo
   字典加载处有瓶颈，改为多线程
 ```
-      try (BufferedReader br = new BufferedReader(new InputStreamReader(
-                    Objects.requireNonNull(getClass().getResourceAsStream(path)), StandardCharsets.UTF_8))) {
-                //System.out.print("以 UTF-8 编码读取词典文件");
-                List<String[]> wordList = br.lines().parallel()
+  try (BufferedReader br = new BufferedReader(new InputStreamReader(
+                Objects.requireNonNull(getClass().getResourceAsStream(path)), StandardCharsets.UTF_8))) {
+            //System.out.print("以 UTF-8 编码读取词典文件");
+            List<String[]> wordList = br.lines().parallel()
   ```
 ## 高版本idea 不适配，解决
 
